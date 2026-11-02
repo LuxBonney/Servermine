@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSMP - Bonney SMP | Servidor de Minecraft</title>
+  <link rel="icon" type="image/png" href="server-icon.png">
+  
+  <!-- Pixel fonts for authentic Minecraft look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Grass Border -->
+  <div class="minecraft-grass-header"></div>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    
+    <!-- Hero Section -->
+    <header class="server-header">
+      
+      <!-- Server Avatar / Icon -->
+      <div class="avatar-frame">
+        <img src="server-icon.png" alt="BSMP Icon" class="server-avatar">
+      </div>
+
+      <!-- Server Title -->
+      <h1 class="server-title">
+        <span class="title-white">Bonney</span><span class="title-gold">SMP</span>
+      </h1>
+      
+      <!-- Subtitle badge / splash -->
+      <div class="splash-badge">
+        <span class="splash-text">Agora com Voice Chat!</span>
+      </div>
+
+      <!-- Description -->
+      <p class="server-description">
+        Servidor de Minecraft survival da comunidade <strong>Bonney SMP (BSMP)</strong>.<br>
+        100% Vanilla puro sem mods pesados! Chat de voz por proximidade (Simple Voice Chat) e suporte para Java & Bedrock.
+      </p>
+
+      <!-- IP Copy Box -->
+      <div class="ip-container">
+        <div class="ip-box">
+          <span class="ip-address" id="server-ip">179.197.234.55</span>
+          <button class="mc-btn mc-btn-sm" id="btn-copy-ip" onclick="copyIp('179.197.234.55', this)">
+            <span class="btn-text">Copiar IP</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Server Status -->
+      <div class="server-status" id="server-status">
+        <span class="status-indicator online-dot"></span>
+        <span class="status-text" id="status-text">Online &bull; Verificando jogadores...</span>
+      </div>
+
+      <!-- Primary Action Buttons -->
+      <div class="action-buttons">
+        <a href="#voice-chat" class="mc-btn mc-btn-green">
+          <span class="btn-text">Baixar Simple Voice Chat</span>
+        </a>
+        <a href="#como-jogar" class="mc-btn mc-btn-gray">
+          <span class="btn-text">Como Jogar</span>
+        </a>
+      </div>
+
+      <div class="server-submeta">
+        Paper 1.21.1 &bull; Java & Bedrock &bull; Simple Voice Chat
+      </div>
+
+    </header>
+
+    <!-- Section: Antes de começar -->
+    <section class="info-section">
+      <h2 class="section-title">Antes de começar</h2>
+      <p class="section-subtitle">O que você precisa saber</p>
+
+      <div class="features-grid">
+        
+        <!-- Card 1 -->
+        <div class="mc-card">
+          <h3 class="card-title">Java & Bedrock</h3>
+          <p class="card-body">
+            Jogue pelo <strong>PC</strong> (Java ou Bedrock), <strong>Celular</strong> (Android/iOS) ou <strong>Console</strong>! Todos jogam juntos no mesmo mundo com crossplay.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="mc-card">
+          <h3 class="card-title">Zero Mods Pesados</h3>
+          <p class="card-body">
+            Não precisa de nenhum modpack pesado de 300 mods. O servidor é Survival puro, super leve e roda sem lag em qualquer máquina.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="mc-card">
+          <h3 class="card-title">Simple Voice Chat</h3>
+          <p class="card-body">
+            A <strong>única</strong> coisa necessária no Java é o mod <em>Simple Voice Chat</em> para conversar por voz com quem estiver perto de você no jogo!
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="mc-card">
+          <h3 class="card-title">Versão 1.21.x</h3>
+          <p class="card-body">
+            Servidor atualizado no <strong>Paper 1.21.1</strong>. Entre com seu Minecraft atualizado e divirta-se com o melhor do survival.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Como Conectar -->
+    <section class="guide-section" id="como-jogar">
+      <h2 class="section-title">Como Conectar</h2>
+      <p class="section-subtitle">Escolha sua versão para entrar</p>
+
+      <div class="connect-grid">
+        
+        <!-- Java Card -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <span class="platform-badge">PC</span>
+            <h3>Minecraft Java Edition</h3>
+          </div>
+          <p class="guide-desc">Adicione o servidor na sua lista de Multiplayer:</p>
+          
+          <div class="field-box">
+            <span class="field-label">IP do Servidor:</span>
+            <div class="field-value-row">
+              <code class="code-val">179.197.234.55</code>
+              <button class="mc-btn mc-btn-xs" onclick="copyIp('179.197.234.55', this)">
+                <span class="btn-text">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="field-box">
+            <span class="field-label">Porta:</span>
+            <div class="field-value-row">
+              <code class="code-val">25565 (Padrão)</code>
+            </div>
+          </div>
+
+          <div class="guide-tip">
+            <strong>Dica:</strong> Instale o mod <strong>Simple Voice Chat</strong> para poder falar e ouvir os outros jogadores por proximidade!
+          </div>
+
+          <a href="#voice-chat" class="mc-btn mc-btn-green w-full">
+            <span class="btn-text">Ver tutorial do Voice Chat</span>
+          </a>
+        </div>
+
+        <!-- Bedrock Card -->
+        <div class="guide-card">
+          <div class="guide-card-header">
+            <span class="platform-badge bedrock">Celular & Console</span>
+            <h3>Minecraft Bedrock Edition</h3>
+          </div>
+          <p class="guide-desc">Conecte no celular (Android/iOS), Windows Bedrock ou Console:</p>
+
+          <div class="field-box">
+            <span class="field-label">Nome do Servidor:</span>
+            <div class="field-value-row">
+              <code class="code-val">BSMP</code>
+            </div>
+          </div>
+
+          <div class="field-box">
+            <span class="field-label">Endereço do Servidor:</span>
+            <div class="field-value-row">
+              <code class="code-val">179.197.234.55</code>
+              <button class="mc-btn mc-btn-xs" onclick="copyIp('179.197.234.55', this)">
+                <span class="btn-text">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="field-box">
+            <span class="field-label">Porta:</span>
+            <div class="field-value-row">
+              <code class="code-val">19132 (Padrão)</code>
+              <button class="mc-btn mc-btn-xs" onclick="copyIp('19132', this)">
+                <span class="btn-text">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="guide-tip bedrock-tip">
+            <strong>Zero instalação:</strong> No Bedrock você não precisa de mod algum, basta adicionar o servidor e jogar direto!
+          </div>
+
+          <button class="mc-btn mc-btn-gray w-full" onclick="copyIp('179.197.234.55:19132', this)">
+            <span class="btn-text">Copiar IP & Porta</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Baixar o Simple Voice Chat -->
+    <section class="voice-section" id="voice-chat">
+      <h2 class="section-title">Simple Voice Chat</h2>
+      <p class="section-subtitle">O único mod necessário para falar por proximidade no jogo</p>
+
+      <div class="launcher-grid">
+        
+        <!-- Launcher 1: Modrinth / Prism Launcher -->
+        <div class="launcher-card">
+          <div class="launcher-header">
+            <div class="recom-badge">Recomendado</div>
+            <div class="launcher-icon modrinth-icon">🎙️</div>
+            <h3 class="launcher-name">Modrinth</h3>
+            <p class="launcher-desc">
+              Página oficial do mod no Modrinth. Baixe a versão para <strong>Fabric, NeoForge ou Forge (1.21.1)</strong>.
+            </p>
+          </div>
+          
+          <div class="launcher-actions">
+            <a href="https://modrinth.com/mod/simple-voice-chat" target="_blank" rel="noopener noreferrer" class="mc-btn mc-btn-green w-full">
+              <span class="btn-text">Baixar no Modrinth</span>
+            </a>
+            <div class="system-links">
+              <a href="https://modrinth.com/mod/simple-voice-chat/versions" target="_blank" rel="noopener noreferrer">Todas as Versões</a>
+              &bull;
+              <a href="https://modrinth.com/app" target="_blank" rel="noopener noreferrer">Modrinth App</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Launcher 2: CurseForge / Manual -->
+        <div class="launcher-card">
+          <div class="launcher-header">
+            <div class="launcher-icon curseforge-icon">🔥</div>
+            <h3 class="launcher-name">CurseForge</h3>
+            <p class="launcher-desc">
+              Disponível também no CurseForge para quem usa o launcher da Curse ou prefere baixar o <code>.jar</code> direto.
+            </p>
+          </div>
+
+          <div class="launcher-actions">
+            <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank" rel="noopener noreferrer" class="mc-btn mc-btn-gray w-full">
+              <span class="btn-text">Baixar no CurseForge</span>
+            </a>
+            <div class="system-links">
+              <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API (necessário no Fabric)</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Steps -->
+      <div class="tutorial-box">
+        <h3 class="tutorial-title">Passo a passo rápido:</h3>
+        <ol class="tutorial-list">
+          <li>Baixe o <strong>Simple Voice Chat</strong> para Minecraft <strong>1.21.1</strong> (Fabric ou NeoForge/Forge).</li>
+          <li>Coloque o arquivo <code>.jar</code> dentro da sua pasta <code>.minecraft/mods</code>.</li>
+          <li>Inicie o jogo e entre no IP <code>179.197.234.55</code>.</li>
+          <li>Aperte a tecla <kbd>V</kbd> ou <kbd>Caps Lock</kbd> para abrir o menu do mod e testar o microfone!</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="server-footer">
+      <div class="footer-copy">
+        <p><strong>BSMP &bull; Bonney SMP</strong> &mdash; 2026</p>
+        <p class="sub">Servidor independente de Minecraft. Não afiliado à Mojang ou Microsoft.</p>
+      </div>
+      <div class="footer-ip-chip" onclick="copyIp('179.197.234.55', this)">
+        <span>IP: 179.197.234.55</span>
+        <small>(Clique para copiar)</small>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">IP copiado com sucesso!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
